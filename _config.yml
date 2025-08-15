@@ -1,3 +1,44 @@
-theme: jekyll-theme-minimal
 title: Nick DeCapite
 description: Personal portfolio to highlight my experience, publications, interests, and newsletter
+baseurl: ""
+url: "https://defidecap.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: Home
+    url: "#home"
+  - title: Publications
+    url: "#publications"
+  - title: Updates
+    url: "#updates"
+  - title: Experience
+    url: "#experience"
+  - title: Education
+    url: "#education"
+  - title: Contact
+    url: "#contact"
+
+# Social links
+social:
+  email: "nick@example.com"
+  linkedin: "your-linkedin"
+  github: "defidecap"
+  twitter: "your-twitter"
+
+# Content
+author:
+  name: "Nick DeCapite"
+  bio: "Your bio here"
+  location: "Your location"
+
+# Exclude files
+exclude:
+  - README.md
+  - LICENSE
