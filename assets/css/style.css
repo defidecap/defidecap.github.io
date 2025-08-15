@@ -301,4 +301,20 @@ li {
         width: 100%;
         justify-content: space-around;
     }
+    
+    /* Force intro text to be left-aligned on mobile */
+    .intro-section,
+    .intro-section *,
+    .intro-text,
+    .intro-text *,
+    .intro-text p {
+        text-align: left !important;
+    }
+    
+    /* Keep these centered on mobile */
+    .intro-image,
+    .intro-image *,
+    .social-links {
+        text-align: center !important;
+    }
 }
