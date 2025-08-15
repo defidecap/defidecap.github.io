@@ -26,17 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide nav on scroll past intro section
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const introSection = document.querySelector('.intro-section');
         
-        if (introSection) {
-            const introBottom = introSection.offsetTop + introSection.offsetHeight;
-            
-            // Hide nav when scrolled past the intro section
-            if (scrollTop > introBottom - 100) { // Add some buffer
-                nav.classList.add('hidden');
-            } else {
-                nav.classList.remove('hidden');
-            }
+        // Hide nav after scrolling just 150px down
+        if (scrollTop > 150) {
+            nav.classList.add('hidden');
+        } else {
+            nav.classList.remove('hidden');
         }
     });
     
