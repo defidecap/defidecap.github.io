@@ -10,6 +10,18 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Exclude vendor directory and gem files
+exclude:
+  - vendor
+  - vendor/**/*
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - "*.gemspec"
+  - "*.gem"
+
 # Navigation
 navigation:
   - title: Home
