@@ -8,19 +8,21 @@ title: Home
 <div class="intro-section">
   <div class="intro-content">
     <div class="social-links">
-      <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank">LinkedIn</a> | 
-      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">GScholar</a> | 
-      <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank">Twitter</a> | 
-      <a href="/assets/resume.pdf" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/nick-decapite-b6aa80168/" target="_blank">LinkedIn</a> | 
+      <a href="https://scholar.google.com/citations?user=JtElLZ0AAAAJ&hl=en" target="_blank">GScholar</a> | 
+      <a href="https://github.com/defidecap" target="_blank">Github</a> | 
+      <a href="https://docs.google.com/document/d/1OYCu1QVCwmgl6nlTKb8HJZMpKe9EznShj51Efl9AUq8/edit?usp=sharing" target="_blank">Resume</a>
     </div>
     
     <div class="intro-layout">
       <div class="intro-text">
-        <p>Your professional introduction and background here. Describe your expertise, research interests, and what you're passionate about.</p>
+        <p>I received an engineering degree in ECE and a B.S. in CS from Duke University. My interests lie in the AI space and the blockchain industry. My free time consists of listening to any podcast or talk with AI leaders discussing their view on the future software climate in the AI era we are living through today. I am keen on the deep investigation of working with different open source tools in the AI and crypto spaces.</p>
+
+        <p>I am currently the Head of Engineering/Product at a web3 startup where we aim to be the intersection of all crypto news for our users whether crypto native or not. We are a web2 content platform with different products across the web2/web3 space such as a Crypto Expert AI Agent, Airdrop Tracker, Learn & Earn campaigns, etc.</p>
         
-        <p>Add details about your experience, key achievements, and areas of focus that define your professional identity.</p>
+        <p>I have previously worked as a SWE at Capital One working across 2 teams: one focused on enterprise software development testing across the Developer Experience Org, and another in the Data & ML Org as part of the platform team behind the BI tool Databricks. </p>
         
-        <p>Include any personal touches that show your personality and what drives you in your work.</p>
+        <p>Outside of listening to AI podcasts, I love being outside in nature and following an array of Carolina sports teams.</p>
       </div>
       
       <div class="intro-image">
