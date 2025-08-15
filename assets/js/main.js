@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Hide nav on scroll past intro section
-    let lastScrollTop = 0;
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const introSection = document.querySelector('.intro-section');
@@ -32,14 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (introSection) {
             const introBottom = introSection.offsetTop + introSection.offsetHeight;
             
-            if (scrollTop > introBottom) {
+            // Hide nav when scrolled past the intro section
+            if (scrollTop > introBottom - 100) { // Add some buffer
                 nav.classList.add('hidden');
             } else {
                 nav.classList.remove('hidden');
             }
         }
-        
-        lastScrollTop = scrollTop;
     });
     
     // Smooth scrolling for navigation links
