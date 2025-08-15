@@ -32,16 +32,18 @@ body {
 
 /* Navigation */
 nav {
-    background: var(--nav-bg);
+    background: transparent;
     padding: 1rem;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    transition: all 0.3s ease;
 }
 
 nav a {
@@ -61,15 +63,59 @@ nav a:hover {
 #theme-toggle {
     background: none;
     border: none;
-    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+#theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
+    transition: fill 0.3s ease;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 0.25rem;
     transition: background-color 0.2s;
 }
 
-#theme-toggle:hover {
+.menu-toggle:hover {
     background-color: var(--border-color);
+}
+
+.menu-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Hidden nav state */
+nav.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 /* Main content */
@@ -134,6 +180,9 @@ li {
     font-size: 0.95rem;
     color: var(--text-color);
     width: 66.67%; /* Match the flex: 2 ratio of intro-text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .social-links a {
@@ -177,10 +226,35 @@ li {
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
         flex-direction: column;
-        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        padding: 1rem;
         gap: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.open {
+        display: flex;
+    }
+    
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+        position: relative;
     }
     
     h1 {
@@ -208,5 +282,10 @@ li {
     .profile-pic {
         width: 150px;
         height: 150px;
+    }
+    
+    .social-links {
+        width: 100%;
+        justify-content: space-around;
     }
 }

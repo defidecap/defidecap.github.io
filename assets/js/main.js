@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
+    const nav = document.querySelector('nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
     
     // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -15,6 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
     });
     
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+    });
+    
+    // Hide nav on scroll past intro section
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const introSection = document.querySelector('.intro-section');
+        
+        if (introSection) {
+            const introBottom = introSection.offsetTop + introSection.offsetHeight;
+            
+            if (scrollTop > introBottom) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -26,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
             }
+            // Close mobile menu after clicking a link
+            navLinks.classList.remove('open');
         });
     });
 });
