@@ -118,11 +118,16 @@ nav.hidden {
     opacity: 0;
 }
 
+/* Navigation spacer */
+.nav-spacer {
+    height: 80px; /* Height to create space between nav and content */
+}
+
 /* Main content */
 main, body > * {
     max-width: 800px;
     margin: 0 auto;
-    padding: 8rem 1rem 2rem 1rem; /* Add more top padding to account for fixed nav */
+    padding: 2rem 1rem; /* Reduced padding since we have nav-spacer */
 }
 
 /* Typography */
@@ -270,11 +275,16 @@ li {
     .intro-layout {
         flex-direction: column;
         gap: 1.5rem;
+        text-align: left; /* Force left alignment for the entire layout */
     }
     
     .intro-text {
         order: 2;
-        text-align: left; /* Keep text left-aligned on mobile */
+        text-align: left !important; /* Force left alignment */
+    }
+    
+    .intro-text p {
+        text-align: left !important; /* Force paragraphs to be left-aligned */
     }
     
     .intro-image {
