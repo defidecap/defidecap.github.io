@@ -122,7 +122,7 @@ nav.hidden {
 main, body > * {
     max-width: 800px;
     margin: 0 auto;
-    padding: 6rem 1rem 2rem 1rem; /* Add top padding to account for fixed nav */
+    padding: 8rem 1rem 2rem 1rem; /* Add more top padding to account for fixed nav */
 }
 
 /* Typography */
@@ -172,7 +172,8 @@ li {
 
 /* Intro section */
 .intro-section {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem; /* Reduced spacing to experience section */
+    margin-top: 2rem; /* Extra spacing from nav */
 }
 
 .social-links {
@@ -268,16 +269,17 @@ li {
     
     .intro-layout {
         flex-direction: column;
-        text-align: center;
         gap: 1.5rem;
     }
     
     .intro-text {
         order: 2;
+        text-align: left; /* Keep text left-aligned on mobile */
     }
     
     .intro-image {
         order: 1;
+        text-align: center; /* Only center the image */
     }
     
     .profile-pic {
