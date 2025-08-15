@@ -133,6 +133,7 @@ li {
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
     color: var(--text-color);
+    width: 66.67%; /* Match the flex: 2 ratio of intro-text */
 }
 
 .social-links a {
